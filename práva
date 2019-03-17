@@ -1,0 +1,160 @@
+groups:
+  Default:
+    options:
+      default: true
+      prefix: ' &8&lHrac &f'
+    permissions:
+    - modifyworld.*
+    - essentials.balance
+    - essentials.balancetop
+    - essentials.pay
+    - essentials.pay.multiple
+    - essentials.afk
+    - essentials.helpop
+    - essentials.list
+    - essentials.mail
+    - essentials.mail.send
+    - essentials.msg
+    - essentials.spawn
+    - essentials.delhome
+    - essentials.home
+    - essentials.sethome
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpahere
+    - essentials.tpdeny
+    - essentials.warp
+    - essentials.signs.use.repair
+    - essentials.signs.use.sell
+    - essentials.signs.use.warp
+    - residence.create
+    - residence.select
+  helper:
+    options:
+      prefix: ' &2&lHelper &f'
+    permissions:
+    - modifyworld.*
+    - essentials.fly
+    - essentials.fly.safelogin
+    - essentials.god
+    - essentials.heal.others
+    - essentials.heal
+    - essentials.repair
+    - essentials.jails
+    - essentials.kick
+    - essentials.kick.notify
+    - essentials.mute
+    - essentials.broadcast
+    inheritance:
+    - Default
+  Builder:
+    options:
+      prefix: ' &9&lBuilder &f'
+    permissions:
+    - essentials.time.set.*
+    - essentials.time.set
+    - essentials.time
+    - essentials.weather
+    - essentials.weather.clear
+    - essentials.night
+    - essentials.day
+    - residence.admin
+    - essentials.gamemode
+    - essentials.skull
+    - essentials.skull.modify
+    - essentials.speed
+    - essentials.tree
+    - essentials.bigtree
+    - worldedit.*
+    - essentials.broadcast
+    inheritance:
+    - Default
+  Admin:
+    options:
+      prefix: ' &c&lAdmin &f'
+    permissions:
+    - modifyworld.*
+    - essentials.enchant
+    - essentials.exp
+    - essentials.exp.give.others
+    - essentials.feed.others
+    - essentials.fly
+    - essentials.fly.safelogin
+    - essentials.gamemode
+    - essentials.god
+    - essentials.god.others
+    - essentials.hat
+    - essentials.heal
+    - essentials.heal.others
+    - essentials.kit.others
+    - essentials.kit
+    - essentials.repair
+    - essentials.speed
+    - essentials.time
+    - essentials.time.set
+    - essentials.eco
+    - essentials.worth
+    - essentials.ban
+    - essentials.ban.offline
+    - essentials.broadcast
+    - essentials.clearinventory
+    - essentials.enderchest
+    - essentials.invsee
+    - essentials.invsee.modify
+    - essentials.kick
+    - essentials.socialspy
+    - essentials.sudo
+    - essentials.tempban
+    - essentials.vanish
+    - essentials.back
+    - essentials.delhome
+    - essentials.delwarp
+    - essentials.home.others
+    - essentials.jump
+    - essentials.sethome.multiple.admin
+    - essentials.setwarp
+    - essentials.top
+    - essentials.tp.others
+    - essentials.tp
+    - essentials.tpo
+    - essentials.tpohere
+    - essentials.tptoggle
+    inheritance:
+    - Default
+    - helper
+    - Builder
+    - VIP
+  VIP:
+    options:
+      prefix: VIP
+    permissions:
+    - modifyworld.*
+  ServerAdmin:
+    options:
+      prefix: ' &c&lServer Admin &f'
+    permissions:
+    - modifyworld.*
+    - '*'
+users:
+  6617d134-8233-3028-8d3e-867d5150c70b:
+    permissions: []
+    group: []
+    options:
+      name: AkelGP
+  d441d5cf-b63b-3acc-9e48-a657cc4d4524:
+    group:
+    - ServerAdmin
+    options:
+      name: eklipsosk
+  440bde27-ccc0-38e8-be7c-9ec43c476ad7:
+    group:
+    - Builder
+    options:
+      name: Smallik
+  a75d8457-c5ec-3c74-98aa-a0269b182b33:
+    permissions: []
+    options:
+      name: iLegacy
+  '@':
+    permissions: []
+schema-version: 1
