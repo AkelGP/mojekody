@@ -1,0 +1,85 @@
+========== UNABLE TO LOAD PERMISSIONS BACKEND =========
+Your configuration must be fixed before PEX will enable
+Details: Error loading permissions file!
+=======================================================
+ru.tehkode.permissions.exceptions.PermissionBackendException: Error loading permissions file!
+	at ru.tehkode.permissions.backends.file.FileBackend.reload(FileBackend.java:321) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.backends.file.FileBackend.<init>(FileBackend.java:120) ~[PermissionsEx-1.23.4.jar:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_152]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_152]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_152]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_152]
+	at ru.tehkode.permissions.backends.PermissionBackend.getBackend(PermissionBackend.java:392) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.backends.PermissionBackend.getBackend(PermissionBackend.java:367) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.PermissionManager.createBackend(PermissionManager.java:624) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.PermissionManager.setBackend(PermissionManager.java:606) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.PermissionManager.initBackend(PermissionManager.java:693) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.PermissionManager.<init>(PermissionManager.java:67) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.bukkit.PermissionsEx.onEnable(PermissionsEx.java:175) [PermissionsEx-1.23.4.jar:?]
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:321) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:332) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:404) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.craftbukkit.v1_8_R3.CraftServer.loadPlugin(CraftServer.java:342) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.craftbukkit.v1_8_R3.CraftServer.enablePlugins(CraftServer.java:314) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.s(MinecraftServer.java:406) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.k(MinecraftServer.java:370) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.a(MinecraftServer.java:325) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.init(DedicatedServer.java:235) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:504) [minecraft_server.jar:git-Bukkit-e1ebe52]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_152]
+Caused by: org.bukkit.configuration.InvalidConfigurationException: while scanning an anchor
+ in 'string', line 5, column 15:
+          prefix: &8&lHrĂˇÄŤ &f
+                  ^
+expected alphabetic or numeric character, but found &(38)
+ in 'string', line 5, column 17:
+          prefix: &8&lHrĂˇÄŤ &f
+                    ^
+
+	at org.bukkit.configuration.file.YamlConfiguration.loadFromString(YamlConfiguration.java:57) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at ru.tehkode.permissions.backends.file.FileConfig.loadFromString(FileConfig.java:68) ~[PermissionsEx-1.23.4.jar:?]
+	at org.bukkit.configuration.file.FileConfiguration.load(FileConfiguration.java:226) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.configuration.file.FileConfiguration.load(FileConfiguration.java:169) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at ru.tehkode.permissions.backends.file.FileConfig.load(FileConfig.java:38) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.backends.file.FileBackend.reload(FileBackend.java:309) ~[PermissionsEx-1.23.4.jar:?]
+	... 23 more
+Caused by: org.yaml.snakeyaml.scanner.ScannerException: while scanning an anchor
+ in 'string', line 5, column 15:
+          prefix: &8&lHrĂˇÄŤ &f
+                  ^
+expected alphabetic or numeric character, but found &(38)
+ in 'string', line 5, column 17:
+          prefix: &8&lHrĂˇÄŤ &f
+                    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanAnchor(ScannerImpl.java:1446) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchAnchor(ScannerImpl.java:939) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:370) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:226) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:586) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:143) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:132) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:229) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:155) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:229) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:155) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:229) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:155) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:229) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:155) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.composeDocument(Composer.java:122) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.composer.Composer.getSingleNode(Composer.java:105) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:120) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:450) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:369) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.configuration.file.YamlConfiguration.loadFromString(YamlConfiguration.java:55) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at ru.tehkode.permissions.backends.file.FileConfig.loadFromString(FileConfig.java:68) ~[PermissionsEx-1.23.4.jar:?]
+	at org.bukkit.configuration.file.FileConfiguration.load(FileConfiguration.java:226) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at org.bukkit.configuration.file.FileConfiguration.load(FileConfiguration.java:169) ~[minecraft_server.jar:git-Bukkit-e1ebe52]
+	at ru.tehkode.permissions.backends.file.FileConfig.load(FileConfig.java:38) ~[PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.permissions.backends.file.FileBackend.reload(FileBackend.java:309) ~[PermissionsEx-1.23.4.jar:?]
+	... 23 more
+[17:15:47] [Server thread/INFO]: [PermissionsEx] Disabling PermissionsEx v1.23.4
+[17:15:47] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[17:15:47] [Server thread/INFO]: Essentials: Using PermissionsEx based permissions.
